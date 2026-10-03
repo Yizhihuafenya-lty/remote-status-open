@@ -1,0 +1,26 @@
+[Unit]
+Description=Remote Status HTTPS relay
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=remote-status
+Group=remote-status
+ExecStart=/usr/local/bin/remote-status-relay
+EnvironmentFile=/etc/remote-status/relay.env
+Restart=on-failure
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+ReadOnlyPaths=/etc/remote-status
+ReadWritePaths=/var/lib/remote-status
+
+[Install]
+WantedBy=multi-user.target

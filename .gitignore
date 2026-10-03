@@ -1,0 +1,25 @@
+# Android/Gradle local state and build output
+**/.gradle/
+**/.kotlin/
+**/build/
+**/local.properties
+**/relay.properties
+**/dist/
+*.apk
+
+# Go and local runtime output
+*.exe
+*.log
+*.err
+**/relay-state*.json
+**/*-state*.json
+
+# Local credentials and certificates
+*.pem
+*.key
+*.p12
+*.jks
+
+# IDE metadata
+.idea/
+*.iml

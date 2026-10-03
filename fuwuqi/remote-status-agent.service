@@ -1,0 +1,24 @@
+[Unit]
+Description=Remote Status outbound-only Linux agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=remote-status
+Group=remote-status
+ExecStart=/usr/local/bin/remote-status-agent
+EnvironmentFile=/etc/remote-status/agent.env
+Restart=always
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+
+[Install]
+WantedBy=multi-user.target

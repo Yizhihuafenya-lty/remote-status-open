@@ -1,0 +1,12 @@
+# Copy this file to relay.properties and replace every placeholder.
+# relay.properties is intentionally ignored by Git.
+
+APP_TOKEN=replace-with-app-token
+
+RELAY_V4_SCHEME=https
+RELAY_V4_HOST=relay-v4.example.com
+RELAY_V4_PORT=50001
+
+RELAY_V6_SCHEME=https
+RELAY_V6_HOST=relay-v6.example.com
+RELAY_V6_PORT=50001

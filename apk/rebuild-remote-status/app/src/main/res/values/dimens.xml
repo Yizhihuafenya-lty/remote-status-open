@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="panel_padding">16dp</dimen>
+    <dimen name="card_gap">8dp</dimen>
+    <dimen name="row_gap">5dp</dimen>
+    <dimen name="gauge_height">8dp</dimen>
+    <dimen name="gauge_gap">5dp</dimen>
+</resources>
